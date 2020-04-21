@@ -1,0 +1,204 @@
+ 
+  * {
+  box-sizing: border-box;
+  margin: 0px; }
+  
+  html, body{
+    height:100%;
+    width: 100%;
+  }
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: factoria, serif;
+  margin: 0;
+  width: 100%
+}
+
+h3{
+  font-family: factoria, serif;
+  padding: 2%;
+  color: rgb(153, 153, 102);
+  position: relative; 
+}
+
+p{
+  font-family: factoria, serif;
+  padding: 2%;
+  color: rgb(153, 153, 102);
+  position: relative; 
+  //font-size: 1.2rem;
+}
+ 
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap:row wrap;
+}
+
+
+.studentCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.studentCard { 
+    position: relative; 
+    height: auto;
+    width: 47%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+}
+
+.studentCard::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255,255,255,0.20);
+}
+
+.linkContainer
+{
+ width: 100%;
+ height: auto;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ padding-top: 20%;
+}
+
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.studentImgContianer {
+  flex: 47%;
+  padding: 20px;
+}
+
+/* Main column */
+.studnetInfoContainer {
+  flex: 47%;
+  padding: 20px;
+  padding-top:10%;
+}
+
+.studnetLinksContainer {
+  flex: 47%;
+  padding: 20px;
+}
+
+.studentCareerContainer{
+  flex: 47%;
+  padding: 20px;
+}
+
+
+#premierePhoto img{
+  width: 100%; 
+  position: relative;
+   }
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+a {
+  font-family: factoria, serif;
+  color: rgb(153, 153, 102);
+  position: relative; 
+  text-decoration: none;
+  display: block;
+  padding:5%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+.vl {
+  border-left: 2px solid black;
+  height: 30%;
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 700px) {
+
+  .row {  
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .studentCard 
+  {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  p{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  a{
+    font-size: 1.5rem;
+
+  }
+  .linkContainer
+  {
+    padding-top: 5%;
+  }
+  #premierePhoto img{
+  width: 80%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   }
+
+}
+
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+  /* cancel visibility transition delay */
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.studentCard-close {
+  position: absolute;
+  padding: 10px;
+  max-width: 500px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,.9);
+}
+.studentCard .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 5px;
+  color: rgb(153, 153, 102);
+  transition: color .3s;
+  font-size: 2em;
+  line-height: .6em;
+  font-weight: bold;
+}
+.studentCard .close:hover {
+  color: rgb(51, 0, 51);
+}
